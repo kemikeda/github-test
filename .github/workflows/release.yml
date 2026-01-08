@@ -18,11 +18,11 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git tag v${{ github.run_number }}
-          git push origin v${{ github.run_number }}
+          git tag v1.${{ github.run_number }}
+          git push origin v1.${{ github.run_number }}
       
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{ github.run_number }}
-          name: Release ${{ github.run_number }}
+          tag_name: v1.${{ github.run_number }}
+          name: Release 1.${{ github.run_number }}
